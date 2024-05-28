@@ -6,113 +6,122 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
   Text,
-  useColorScheme,
   View,
 } from 'react-native';
+import CompanyData from './components/companyData';
+import ButtonOnPressEvent from './components/ButtonOnPressEvent'
+import State from './components/State';
+import Props from './components/Props';
+import StyleInReactNative from './components/StyleInReactNative';
+import HandleTextInputs from './components/HandleTextInput';
+import SimpleFromINRN from './components/07SimpleFromINRN';
+import FlatLists from './components/08FlatList';
+import ListWithMap from './components/09ListWithMap';
+import GridWithDynamicData from './components/10GridWithDynamicData';
+import ComponentInLoopWithFlatList from './components/11ComponentInLoopWithFlatList';
+import SectionListInRN from './components/12SectionListInRN';
+import ClassComponent from './components/13ClassComponent01';
+import PropsStateInClassComponent from './components/14PropsStateInClass';
+import LifeCycleWithUseEffectHooks from './components/15LifeCycleWithUseEffectHooks';
+import UseEffectAsComponentDidUpdate from './components/16UseEffectAsComponentDidUpdate';
+import ToggleShowHideComponent from './components/17ToggleShowHideComponent';
+import UseEffectForUnmountComponent from './components/18UseEffectForUnmountComponent';
+import ResponsibleUIusingFlex from './components/19ResponsibleUIusingFlex';
+import StyleWithButtom from './components/20StyleWithButtom';
+import RadioButtom from './components/21RadioButtom';
+import DynamicRadioButtom from './components/22DynamicRadioButtom';
+import ActivityIndicatorLoader from './components/23ActivityIndicatorLoader';
+import ModelOrDialogBox from './components/24ModelOrDialogBox';
+import PressableButtom from './components/25PressableButtom';
+import StatusBars from './components/26StatuBar';
+import CheckPlatfrom from './components/27CheckPlatfrom';
+import InstallNPM from './components/28InstallNPM';
+import CustomModal from './components/29CustomModal';
+import StackNavigation from './components/Navigation/01StackNavigation/01StackNavigation';
+import TabNavigationMain from './components/Navigation/Tab Navigation/TabNavigationMain';
+import TopTabNavigation from './components/Navigation/TopTabNavigation/TopTabNavigation';
+import Navigation from './components/01FoodAppUIDesign/Navigation';
+import FoodAppNavigation from './components/FoodDelivaryAp/navigation';
+import MovieAppNavigation from './components/MovieBookingApp/navigation/MovieAppNavigation';
+import UseContextaPractice from './components/HooksPractice/Main';
+import {PlaceContex}  from './components/MovieBookingApp/PlaceContex';
+import SimpleApiCall from './components/APICalling/01SimpleApiCall';
+import ListWithAPICall from './components/APICalling/02ListWithAPICall';
+import FlatListWithApi from './components/APICalling/03FlatListWithApi';
+import UsingPromisesForApi from './components/APICalling/AxiosMethod/UsingPromises';
+import UsingAsyncAwaitForApi from './components/APICalling/AxiosMethod/UsingAsyncAwait';
+import UsingAsycAwaitWithDifferentMethod from './components/APICalling/AxiosMethod/AnotherMethod/UsingAsycAwaitWithDifferentMethod';
+import PhonePayNavigation from './components/PhonePayClone/navigation/PhonePayNavigation';
+import StackNav from './components/PhonePayClone/Route/StackNav';
+import CallPostApi from './components/APICalling/04CallPostApi';
+import PostAPIwithInputField from './components/APICalling/05PostAPIwithInputField';
+import MakeListFromAPIwithDeleteAndUpdate from './components/APICalling/06MakeListFromAPIwithDeleteAndUpdate';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const App = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={{ flex: 1 }}>
+      {/* <CompanyData/> */}
+      {/* <ButtonOnPressEvent/> */}
+      {/* <State/> */}
+      {/* <Props/> */}
+      {/* <StyleInReactNative/>
+       */}
+      {/* <HandleTextInputs/> */}
+      {/* <SimpleFromINRN/> */}
+      {/* <FlatLists/> */}
+      {/* <ListWithMap/> */}
+      {/* <GridWithDynamicData/> */}
+      {/* <ComponentInLoopWithFlatList/> */}
+      {/* <SectionListInRN/> */}
+      {/* <ClassComponent/> */}
+      {/* <PropsStateInClassComponent/> */}
+      {/* <LifeCycleWithUseEffectHooks/> */}
+      {/* <UseEffectAsComponentDidUpdate/> */}
+      {/* <ToggleShowHideComponent/> */}
+      {/* <UseEffectForUnmountComponent/> */}
+      {/* <ResponsibleUIusingFlex/> */}
+      {/* <StyleWithButtom/> */}
+      {/* <RadioButtom/> */}
+      {/* <DynamicRadioButtom/> */}
+      {/* <ActivityIndicatorLoader/> */}
+      {/* <ModelOrDialogBox/> */}
+      {/* <PressableButtom/> */}
+      {/* <StatusBars/> */}
+      {/* <CheckPlatfrom/> */}
+      {/* <InstallNPM/> */}
+      {/* <CustomModal/> */}
+      {/* <StackNavigation/> */}
+      {/* <TabNavigationMain/> */}
+      {/* <TopTabNavigation/> */}
+      {/* <Navigation/> */}
+      {/* <FoodAppNavigation /> */}
+      {/* <UseContextaPractice/> */}
+      {/* <SimpleApiCall/> */}
+      {/* <ListWithAPICall/> */}
+      {/* <FlatListWithApi/> */}
+      {/* <UsingPromisesForApi/> */}
+      {/* <UsingAsyncAwaitForApi/> */}
+      {/* <UsingAsycAwaitWithDifferentMethod/> */}
+
+
+      {/* <PhonePayNavigation/> */}
+      {/* <StackNav/> */}
+
+      
+        {/* <MovieAppNavigation /> */}
+
+        {/* <CallPostApi/> */}
+        {/* <PostAPIwithInputField/> */}
+        <MakeListFromAPIwithDeleteAndUpdate/>
+      
     </View>
   );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
